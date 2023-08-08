@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dedalustask": {
+      "hosting": {
+        "DedalusTask": [
+          "dedalustask"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dedalustask"
+  }
+}
