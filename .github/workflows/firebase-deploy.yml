@@ -18,8 +18,10 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Angular CLI and Dependencies
+        run: |
+          npm install -g @angular/cli
+          npm install
 
       - name: Run tests
         run: ng test --watch=false --browsers=ChromeHeadlessNoSandbox
