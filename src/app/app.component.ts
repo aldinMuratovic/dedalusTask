@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from "@ngrx/store";
+import { SHOW_MODAL } from "./shared/store/actions/shared.actions";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DedalusTask';
+
+  openCreateModal() {
+    this.store.dispatch(SHOW_MODAL());
+  }
+
+  constructor(private store: Store) {
+  }
 }
