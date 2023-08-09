@@ -12,7 +12,7 @@ export const contactReducer = createReducer(
     };
   }),
   on(GET_CONTACT, (state, { id }) => {
-    const contactId = Number(id); // Convert to the appropriate type if needed
+    const contactId = Number(id);
     return {
       ...state,
       contact: state.contacts.find(contact => contact.id === contactId),

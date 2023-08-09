@@ -22,6 +22,6 @@ describe('NavbarComponent', () => {
     const fixture = TestBed.createComponent(NavbarComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.navbar-brand')?.textContent).toContain('Dedalus');
+    expect(compiled.querySelector('.navbar-brand')?.textContent).toContain('Contact Management');
   });
 });
