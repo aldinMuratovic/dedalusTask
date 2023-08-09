@@ -13,5 +13,6 @@ export class CreateItemModalComponent {
   @Input() submitBtnText: string = 'Submit'
 
   @Output() onCloseModal = new EventEmitter<void>()
+  @Output() onSubmit = new EventEmitter<void>()
 
 }

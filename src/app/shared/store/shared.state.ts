@@ -1,5 +1,5 @@
 import { SharedState } from "../../models/SharedState";
 
-export const initialState: SharedState = {
+export const sharedState: SharedState = {
   showModal: false
 }

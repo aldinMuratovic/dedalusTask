@@ -1,6 +1,7 @@
 <app-create-item-modal
   *ngIf="(showModal$ | async) as showModal"
   modalTitle="Create Item"
+  (onSubmit)="onCreateNewContact()"
   (onCloseModal)="onCloseModal()">
   <div class="modal-body">
    <app-create-contact-form></app-create-contact-form>

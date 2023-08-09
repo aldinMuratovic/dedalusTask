@@ -6,9 +6,9 @@
         <button (click)="onCloseModal.emit()" type="button" class="btn-close" aria-label="Close"></button>
       </div>
       <ng-content></ng-content>
-      <div class="modal-footer">
+      <div class="modal-footer d-flex justify-content-center">
         <button (click)="onCloseModal.emit()" type="button" class="btn btn-secondary">{{closeBtnText}}</button>
-        <button type="button" class="btn btn-primary">{{submitBtnText}}</button>
+        <button (click)="onSubmit.emit()" type="button" class="btn btn-primary">{{submitBtnText}}</button>
       </div>
     </div>
   </div>

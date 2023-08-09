@@ -1,10 +1,9 @@
 import { Action } from "@ngrx/store";
 import { SharedState } from "../../../models/SharedState";
 import { CLOSE_MODAL, SHOW_MODAL } from "../actions/shared.actions";
+import { sharedState } from "../shared.state";
 
-const defaultState: SharedState = {
-  showModal: false
-}
+const defaultState: SharedState = sharedState
 
 const newState = (state: SharedState, newData: SharedState) => {
   return Object.assign({}, state, newData)

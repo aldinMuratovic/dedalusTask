@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
@@ -21,7 +21,12 @@ export class CreateContactFormComponent {
     })
   }
 
-  constructor(private formBuilder: FormBuilder) {
+  markFormAsTouched() {
+    this.contactForm.markAllAsTouched()
+    this.cdr.detectChanges()
+  }
+
+  constructor(private formBuilder: FormBuilder, private cdr: ChangeDetectorRef) {
   }
 
 }
