@@ -5,11 +5,10 @@ import { CREATE_NEW_CONTACT } from "../actions/contact.actions";
 export const contactReducer = createReducer(
   contactState,
   on(CREATE_NEW_CONTACT, (state, { newContact }) => {
-    console.log(newContact);
     return {
       ...state,
       showModal: true,
-      contacts: [...state.contacts, newContact],
+      contacts: [...state.contacts, {...newContact, index: state.contacts?.length + 1}],
     };
   })
 );

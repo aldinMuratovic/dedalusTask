@@ -12,13 +12,15 @@ import { SharedModule } from "./shared/shared.module";
 import { CreateContactFormComponent } from './components/create-item-form/create-contact-form.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { contactReducer } from "./shared/store/reducers/contact.reducer";
+import { ContactListComponent } from './components/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    CreateContactFormComponent
+    CreateContactFormComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,

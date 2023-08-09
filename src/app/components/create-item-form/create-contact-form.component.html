@@ -7,7 +7,8 @@
       formControlName="firstName"
       id="firstName">
     <label for="firstName">First Name</label>
-    <div class="text-danger mt-2" *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
+    <div class="text-danger mt-2"
+         *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
       <p *ngIf="contactForm.get('firstName')?.errors?.['required']">Field is required.</p>
     </div>
   </div>
