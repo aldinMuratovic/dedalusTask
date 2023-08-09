@@ -9,12 +9,15 @@ import { StoreModule } from "@ngrx/store";
 import { sharedReducer } from "./shared/store/reducers/shared.reducer";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { SharedModule } from "./shared/shared.module";
+import { CreateContactFormComponent } from './components/create-item-form/create-contact-form.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { SharedModule } from "./shared/shared.module";
       shared: sharedReducer
     }),
     StoreDevtoolsModule.instrument(),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
