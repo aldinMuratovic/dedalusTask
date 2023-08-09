@@ -12,8 +12,3 @@ export const selectContact = createSelector(
   selectSharedFeature,
   (state: ContactState) => state.contact
 );
-
-export const selectIsLoading = createSelector(
-  selectSharedFeature,
-  (state: ContactState) => state.isLoading
-);

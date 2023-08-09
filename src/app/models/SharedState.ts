@@ -1,3 +1,4 @@
 export interface SharedState {
-  showModal: boolean
+  showModal: boolean,
+  isLoading: boolean
 }

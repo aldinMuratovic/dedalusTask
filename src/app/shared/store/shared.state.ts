@@ -1,5 +1,6 @@
 import { SharedState } from "../../models/SharedState";
 
 export const sharedState: SharedState = {
-  showModal: false
+  showModal: false,
+  isLoading: true,
 }

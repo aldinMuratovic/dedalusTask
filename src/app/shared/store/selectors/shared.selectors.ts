@@ -7,3 +7,9 @@ export const selectShowModal = createSelector(
   selectSharedFeature,
   (state: SharedState) => state.showModal
 );
+
+export const selectIsLoading = createSelector(
+  selectSharedFeature,
+  (state: SharedState) => state.isLoading
+);
+

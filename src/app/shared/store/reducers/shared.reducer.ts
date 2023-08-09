@@ -1,21 +1,31 @@
-import { Action } from "@ngrx/store";
-import { SharedState } from "../../../models/SharedState";
-import { CLOSE_MODAL, SHOW_MODAL } from "../actions/shared.actions";
+import { createReducer, on } from "@ngrx/store";
+import { CLOSE_MODAL, SHOW_MODAL, TOGGLE_LOADER_FALSE, TOGGLE_LOADER_TRUE } from "../actions/shared.actions";
 import { sharedState } from "../shared.state";
 
-const defaultState: SharedState = sharedState
-
-const newState = (state: SharedState, newData: SharedState) => {
-  return Object.assign({}, state, newData)
-}
-
-export function sharedReducer(state: SharedState = defaultState, action: Action) {
-  switch (action.type) {
-    case SHOW_MODAL.type:
-      return newState(state, {showModal: true})
-    case CLOSE_MODAL.type:
-      return newState(state, {showModal: false})
-    default:
-      return state
-  }
-}
+export const sharedReducer = createReducer(
+  sharedState,
+  on(SHOW_MODAL, (state) => {
+    return {
+      ...state,
+      showModal: true
+    };
+  }),
+  on(CLOSE_MODAL, (state) => {
+    return {
+      ...state,
+      showModal: false
+    };
+  }),
+  on(TOGGLE_LOADER_FALSE, (state) => {
+    return {
+      ...state,
+      isLoading: false
+    };
+  }),
+  on(TOGGLE_LOADER_TRUE, (state) => {
+    return {
+      ...state,
+      isLoading: true
+    };
+  })
+);

@@ -4,5 +4,4 @@ export interface ContactState {
   contacts: IContact[]
   contact?: IContact
   error?: string[]
-  isLoading: boolean
 }

@@ -10,6 +10,5 @@ export const contactState: ContactState = {
     email: '',
     address: '',
   },
-  isLoading: true,
   error: [],
 };

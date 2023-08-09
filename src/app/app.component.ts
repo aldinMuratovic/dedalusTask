@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from "@ngrx/store";
-import { CLOSE_MODAL, SHOW_MODAL } from "./shared/store/actions/shared.actions";
-import { CREATE_NEW_CONTACT, TOGGLE_LOADER_FALSE } from "./shared/store/actions/contact.actions";
+import { CLOSE_MODAL, SHOW_MODAL, TOGGLE_LOADER_FALSE } from "./shared/store/actions/shared.actions";
+import { CREATE_NEW_CONTACT } from "./shared/store/actions/contact.actions";
 import { CreateContactFormComponent } from "./components/create-item-form/create-contact-form.component";
 import { Observable } from "rxjs";
-import { selectShowModal } from "./shared/store/selectors/shared.selectors";
-import { selectIsLoading } from "./shared/store/selectors/contact.selectors";
+import { selectIsLoading, selectShowModal } from "./shared/store/selectors/shared.selectors";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -38,11 +38,12 @@ export class AppComponent implements OnInit {
       if (this.createContactFormComponent.contactForm.valid) {
         this.store.dispatch(CREATE_NEW_CONTACT({newContact: this.createContactFormComponent.contactForm.value}));
         this.onCloseModal()
+        this.router.navigateByUrl('/')
       }
 
     this.createContactFormComponent?.markFormAsTouched()
   }
 
-  constructor(private store: Store) {
+  constructor(private store: Store, private router: Router) {
   }
 }

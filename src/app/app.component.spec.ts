@@ -2,8 +2,7 @@ import { ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testin
 import { Store, StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { CreateContactFormComponent } from './components/create-item-form/create-contact-form.component';
-import { SHOW_MODAL, CLOSE_MODAL } from './shared/store/actions/shared.actions';
-import { TOGGLE_LOADER_FALSE } from './shared/store/actions/contact.actions';
+import { SHOW_MODAL, CLOSE_MODAL, TOGGLE_LOADER_FALSE } from './shared/store/actions/shared.actions';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from "./shared/components/navbar/navbar.component";
 import { ActivatedRoute, RouterModule } from "@angular/router";
