@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { AppState } from "../../../models/AppState";
@@ -10,7 +10,8 @@ import { selectContact } from "../../../shared/store/selectors/contact.selectors
 @Component({
   selector: 'app-contact-details',
   templateUrl: './contact-details.component.html',
-  styleUrls: ['./contact-details.component.scss']
+  styleUrls: ['./contact-details.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactDetailsComponent implements OnInit {
 
