@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { contactState } from "../contact.state";
-import { CREATE_NEW_CONTACT, GET_CONTACT } from "../actions/contact.actions";
+import { CREATE_NEW_CONTACT, GET_CONTACT, TOGGLE_LOADER_FALSE, TOGGLE_LOADER_TRUE } from "../actions/contact.actions";
 
 export const contactReducer = createReducer(
   contactState,
@@ -17,6 +17,18 @@ export const contactReducer = createReducer(
       ...state,
       contact: state.contacts.find(contact => contact.id === contactId),
       isLoading: false
+    };
+  }),
+  on(TOGGLE_LOADER_FALSE, (state) => {
+    return {
+      ...state,
+      isLoading: false
+    };
+  }),
+  on(TOGGLE_LOADER_TRUE, (state) => {
+    return {
+      ...state,
+      isLoading: true
     };
   })
 );

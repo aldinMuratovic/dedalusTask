@@ -7,7 +7,3 @@ export const selectShowModal = createSelector(
   selectSharedFeature,
   (state: SharedState) => state.showModal
 );
-
-export const sharedSelectors = {
-  selectShowModal
-};

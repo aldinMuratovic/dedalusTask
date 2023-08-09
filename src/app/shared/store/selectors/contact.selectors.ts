@@ -13,8 +13,7 @@ export const selectContact = createSelector(
   (state: ContactState) => state.contact
 );
 
-
-
-export const contactSelectors = {
-  selectAllContacts
-};
+export const selectIsLoading = createSelector(
+  selectSharedFeature,
+  (state: ContactState) => state.isLoading
+);

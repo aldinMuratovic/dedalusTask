@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CreateItemModalComponent } from "../components/create-item-modal/create-item-modal.component";
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
-    CreateItemModalComponent
+    CreateItemModalComponent,
+    LoaderComponent
   ],
   exports: [
-    CreateItemModalComponent
+    CreateItemModalComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule

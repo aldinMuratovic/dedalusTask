@@ -10,6 +10,6 @@ export const contactState: ContactState = {
     email: '',
     address: '',
   },
-  isLoading: false,
+  isLoading: true,
   error: [],
 };
