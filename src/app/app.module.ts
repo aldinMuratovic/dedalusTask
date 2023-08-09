@@ -13,6 +13,7 @@ import { CreateContactFormComponent } from './components/create-item-form/create
 import { ReactiveFormsModule } from "@angular/forms";
 import { contactReducer } from "./shared/store/reducers/contact.reducer";
 import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { ContactModule } from './components/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
     }),
     StoreDevtoolsModule.instrument(),
     ReactiveFormsModule,
+    ContactModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

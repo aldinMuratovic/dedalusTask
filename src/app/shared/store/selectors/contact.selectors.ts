@@ -8,6 +8,12 @@ export const selectAllContacts = createSelector(
   (state: ContactState) => state.contacts
 );
 
+export const selectContact = createSelector(
+  selectSharedFeature,
+  (state: ContactState) => state.contact
+);
+
+
 
 export const contactSelectors = {
   selectAllContacts
