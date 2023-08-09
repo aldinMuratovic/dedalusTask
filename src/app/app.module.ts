@@ -11,7 +11,6 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { SharedModule } from "./shared/shared.module";
 import { CreateContactFormComponent } from './components/create-item-form/create-contact-form.component';
 import { ReactiveFormsModule } from "@angular/forms";
-import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { CommonModule } from "@angular/common";
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CommonModule,
     StoreModule.forRoot({
       shared: sharedReducer
     }),
