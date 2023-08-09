@@ -17,7 +17,11 @@ describe('NavbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+
+  it('should render navbar', () => {
+    const fixture = TestBed.createComponent(NavbarComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.navbar-brand')?.textContent).toContain('Dedalus');
   });
 });
